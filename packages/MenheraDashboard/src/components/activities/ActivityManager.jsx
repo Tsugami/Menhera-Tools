@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import FetchActivities from "../../apis/FetchActivities"
 import { ActivitiesContext } from '../../context/ActivitiesContext'
-import { token } from "../../config.json"
 
 import "./ActivityManager.css"
 
@@ -12,7 +11,7 @@ const ActivityManager = () => {
 
     const config = {
         headers: {
-            token
+            token: process.env.TOKEN
         }
     }
 
@@ -30,7 +29,11 @@ const ActivityManager = () => {
     }
     return (
         <div className="activity-manager">
-            <main>
+          <form className="add-activity">
+            <input placeholder="New Activity"></input>
+            <button>Enviar</button>
+          </form>
+            {/* <main>
                 <div className="delete">
                     <form>
                         <button onClick={handleDelete} className="botao" type="submit">LIMPAR ACTIVITIES</button>
@@ -56,7 +59,7 @@ const ActivityManager = () => {
                         <button onClick={handleSubmit} className="botao" type="submit">POST ACTIVITY</button>
                     </form>
                 </div>
-            </main>
+            </main> */}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-html {
+/* html {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -78,14 +78,7 @@ header a {
   text-align: center;
   color: black;
 }
-/*  
-
-sUMIU TUDO DO SITE ASKDSAK
-eu vi ahuahuauh
-
 */
-.activity-container { 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px;
+.activity-container {
+  margin: 10px 50px;
 }

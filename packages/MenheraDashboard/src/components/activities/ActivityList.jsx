@@ -6,11 +6,10 @@ import "./ActivityList.css"
 
 const ActivityList = (props) => {
     const { activities, setActivities } = useContext(ActivitiesContext)
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await FetchActivities.get("/all").catch()
-            setActivities(response.data)
+            setActivities([...response.data, ...response.data])
         }
 
         fetchData()
@@ -22,13 +21,13 @@ const ActivityList = (props) => {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Type</th>
+                        <th id="type-column">Type</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {activities && activities.map(activity => {
+                    {activities && activities.map((activity, i) => {
                         return (
-                            <tr key={activity.name}>
+                            <tr key={i}>
                                 <td>{activity.name}</td>
                                 <td>{activity.type}</td>
                             </tr>

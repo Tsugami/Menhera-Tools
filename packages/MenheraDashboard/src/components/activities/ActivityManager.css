@@ -1,4 +1,4 @@
-main {
+/* main {
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
@@ -52,4 +52,34 @@ form {
 .activity-manager {
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
+} */
+
+.activity-manager {
+  font-family: Roboto, sans-serif;
+}
+
+.activity-manager .add-activity {
+  display:flex;
+  flex-direction:row;
+  padding:2px;
+  background-color: #fff;
+  border-radius: 6.25em;
+  height: 30px;
+}
+
+.activity-manager .add-activity input {
+  flex-grow:2;
+}
+
+.activity-manager .add-activity button {
+  background-color: #212529;
+  color: #fff;
+}
+.activity-manager .add-activity input,
+.activity-manager .add-activity button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    box-sizing: border-box;
 }
